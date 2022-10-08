@@ -34,8 +34,10 @@ for x in tqdm(files, total=len(files)):
     except Exception as e:
         print(x, e)
         continue
+    if not item['gnd']:
+        continue
 
     data.append(item)
 
-df = pd.DataFrame
+df = pd.DataFrame(data)
 df.to_csv("info.csv", index=False)
