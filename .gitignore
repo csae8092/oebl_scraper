@@ -131,3 +131,4 @@ dmypy.json
 *.ipynb
 /data
 info.csv
+secret.sh
