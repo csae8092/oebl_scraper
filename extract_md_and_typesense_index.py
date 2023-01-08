@@ -9,7 +9,7 @@ from tqdm import tqdm
 
 def get_fulltext(soup):
     main_div = soup.find("div", {"id": "Langtext"})
-    for div in main_div .find_all("div", {'id': 'Lieferung'}):
+    for div in main_div.find_all("div", {'id': 'Lieferung'}):
         div.decompose()
     text = main_div.get_text("\n").replace('\xa0', '\n')
     return " ".join(text.split())
